@@ -1,0 +1,318 @@
+/* ================= RESET BÁSICO ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= ESTILOS GERAIS ================= */
+body {
+  background-color: #f1e8e1; 
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+/* ================= HEADER ================= */
+header {
+  background-color: #556e82;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+/* Logo central */
+header img {
+  width: 500px;
+  max-width: 90%;
+}
+
+/* Navegação centralizada */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #f1e8e1; 
+  color: #f1e8e1; 
+  color: #556e82; 
+}
+
+/* ================= HERO ================= */
+.hero h2 {
+  font-size: 2rem;
+  color: black;
+}
+
+.hero .btn {
+  display: inline-block;
+  background-color: #f1e8e1; 
+  color: #556e82;
+  padding: 12px 25px;
+  font-weight: 700;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.hero .btn:hover {
+  background-color: #ede7e0;
+}
+
+/* ================= RESTANTE DAS SEÇÕES ================= */
+section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #556e82;
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  border-bottom: 3px solid #ede7e0;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* ================= GALERIA ================= */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.projeto {
+  background: #f1e8e1; 
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.projeto:hover {
+  transform: translateY(-8px);
+}
+
+.projeto img {
+  width: 100%;
+  display: block;
+}
+
+.projeto h3 {
+  margin: 15px 20px 5px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.projeto p {
+  margin: 0 20px 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ================= PACOTES ================= */
+.titulo-pacotes {
+  text-align: center;
+  color: #556e82;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.container-pacotes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.pacote {
+  background: #f1e8e1; 
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  width: 280px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.pacote:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.pacote h3 {
+  margin-bottom: 15px;
+  color: #556e82;
+}
+
+.pacote p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.toggle-btn {
+  background-color: #556e82;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #334450;
+}
+
+.descricao {
+  display: none;
+  margin-top: 10px;
+  color: #555;
+}
+
+/* ================= FORMULÁRIO ================= */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  background: #556e82;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #3e5362;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #556e82;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+/* ================= MODAL ================= */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(85,110,130,0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #f1e8e1; 
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.modal-content h3 {
+  margin-bottom: 10px;
+  color: #556e82;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #556e82;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* ================= WHATSAPP ================= */
+.whatsapp-link {
+  text-align: center;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container-pacotes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header img {
+    width: 200px;
+  }
+}
